@@ -1,0 +1,22 @@
+{
+  "name": "starwars-express",
+  "version": "1.0.0",
+  "description": "Star wars app practice using express.js and building APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesbragagt/StarWars-Express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wesbragagt/StarWars-Express/issues"
+  },
+  "homepage": "https://github.com/wesbragagt/StarWars-Express#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
