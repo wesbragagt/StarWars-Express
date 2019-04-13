@@ -94,30 +94,38 @@
         </div>
 
         <script type="text/javascript">
+            function Newchar(name, role, age, forcePoints) {
+                this.name = name;
+                this.role = role;
+                this.age = age;
+                this.forcePoints = forcePoints;
+            }
             // Inputs values
             $("#add-btn").on("click", function(event) {
                 event.preventDefault();
-                var newCharacter = {
-                    name: $("#name")
+                var newCharacter = new Newchar(
+                    $("#name")
                         .val()
                         .trim(),
-                    role: $("#role")
+                    $("#role")
                         .val()
                         .trim(),
-                    age: $("#age")
+                    $("#age")
                         .val()
                         .trim(),
-                    forcePoints: $("#force-points")
+                    $("#force-points")
                         .val()
                         .trim()
-                };
+                );
+
+                $.post("http://localhost:3001/api/new", newCharacter).done(
+                    function(data) {
+                        console.log(data);
+                        alert("adding character");
+                    }
+                );
 
                 // Question: What does this code do??
-                //   $.post("/api/characters", newCharacter)
-                //     .then(function(data) {
-                //       console.log("add.html", data);
-                //       alert("Adding character...");
-                //     });
             });
         </script>
     </body>
